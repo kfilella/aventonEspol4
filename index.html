@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aventón Espol</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Form Validation -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js"></script>
+
+
+    <link rel="stylesheet" href="stylesheets/styleIndex.css">
+    <script type="text/javascript" src="javascript/jsIndex.js"></script>
+
+  </head>
+  
+  <body>
+    <div class="contenido login-form">
+  		<h2 class="login-title text-center" style="text-align: center;">Ingreso al Sistema</h2>
+      <!-- el action se agrega con jquery -->
+      <form class="form-ingreso" novalidate>
+        <input type="text" class="form-control input-usuario" id="exampleInputUser" placeholder="Ingrese su usuario">
+        <input type="password" class="form-control input-usuario" id="exampleInputPassword" placeholder="Ingrese su contraseña">
+
+        <div class="checkbox login-options text-center">
+					<label><input type="checkbox"/> Recordarme</label>
+          </br></br>
+          <button class="btn-iniciarSesion" onclick="validarLogin()">Iniciar Sesión</button>
+          </br>
+          <a href="#">¿Olvidó su contraseña?</a>
+				</div>
+
+        <div class="botones-inicio">
+          <div class="registro text-center">
+            <h3 class="login-title text-center">¿No tienes una cuenta a&uacute;n?</h3>
+            <button type="button" data-toggle="modal" data-target="#myModal">
+              ¡Registrarme!
+            </button>
+          </div>
+
+          <!-- myModal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="myModalLabel">Registrar Usuario</h4>
+                </div>
+                <div class="modal-body">
+
+                  <form id="loginForm" >
+                    <div class="form-group">
+                      <div class="col-sm-12" style="padding: 0px;">
+                        <input type="text" id="texto" name="username" class="form-control" placeholder="Usuario de Espol" required="true">
+                        <span class="help-block"></span>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <div class="col-sm-12" style="padding: 0px;">
+                        <input type="password" id="pass1" name="password" class="form-control" placeholder="Contraseña nueva" required="true">
+                        <span class="help-block"></span>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <div class="col-sm-12" style="padding: 0px;">
+                        <input type="password" id="pass2" name="password" class="form-control" placeholder="Repita la contraseña" required="true">
+                        <span class="help-block"></span>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+                <div class="footer text-center">
+                  <br><br>
+                  <button type="button" data-dismiss="modal">Cancelar</button>
+                  <button type="button" id="btnRegistrarme" data-dismiss="modal" onclick="validarRegistro()" data-toggle="modal" data-target="#myModal2">Registrarme</button>
+                </div>
+                <p class="nota-pie-modal">
+                  Al registrarte, aceptas las <em>Condiciones de Servicio</em> y la <em>Política de Privacidad</em>, incluyendo el <em>Uso de Cookies</em>. 
+                </p>
+              </div>
+            </div>
+          </div> <!-- FIN myModal-->
+          
+          <div id="modalExito">
+          </div>
+
+          <div id="modalFail">
+          </div>
+
+        </div>  <!-- FIN botones-inicio-->
+      </form>
+    
+    <footer class="pie">
+      &copy; Todos los derechos reservados. 
+      </br>
+      2016 ESPOL
+    </footer>
+
+  	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
+</html>
